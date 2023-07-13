@@ -1,0 +1,6 @@
+Console.WriteLine("Enter an option: ");
+            Console.WriteLine("+ : Add");
+            Console.WriteLine("- : Subtract");
+            Console.WriteLine("* : Multiply");
+            Console.WriteLine("/ : Divide");
+            Console.WriteLine("Enter an option: (Write Symbol on Keyboard)");
