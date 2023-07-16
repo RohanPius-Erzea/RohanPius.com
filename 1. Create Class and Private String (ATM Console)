@@ -1,0 +1,10 @@
+using System;
+using System.Runtime.InteropServices.WindowsRuntime;
+
+public class cardholder
+{
+    private String cardNum;
+    private int pin;
+    private String firstName;
+    private String lastName;
+    private double balance;
