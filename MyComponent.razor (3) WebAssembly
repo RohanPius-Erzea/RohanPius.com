@@ -1,0 +1,23 @@
+// MyComponent.razor
+@page "/mycomponent"
+
+<h1>My Component</h1>
+
+<p>Welcome to my component!</p>
+
+<button class="btn btn-primary" @onclick="DoSomething">Click me</button>
+
+@code {
+    private MyClass myInstance;
+
+    protected override void OnInitialized()
+    {
+        myInstance = new MyClass();
+        myInstance.Name = "Rohan Pius";
+    }
+
+    private void DoSomething()
+    {
+        myInstance.SayHello();
+    }
+}
