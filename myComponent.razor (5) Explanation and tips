@@ -1,0 +1,15 @@
+In this example, we create a Blazor component called MyComponent that injects an instance of the HttpClient class. 
+The component has a button labeled "Fetch Data" and a placeholder for displaying the fetched data.
+
+When the "Fetch Data" button is clicked, the FetchData method is called. 
+Inside this method, we use the GetStringAsync method of HttpClient to make a GET request to the specified URL (https://api.example.com/data in this case). 
+The response data is stored in the data variable, which is then displayed in the component.
+
+If an error occurs during the network request, the exception message is stored in the data variable and displayed as an error message.
+
+Ensure that you have the necessary using statement (using System.Net.Http) at the top of your file and the HttpClient dependency is properly injected into your Blazor component.
+
+Remember to replace the URL (https://api.example.com/data) with the actual URL of the API you want to request data from.
+
+This example demonstrates a basic network request using HttpClient in Blazor WebAssembly, but you can customize it further based on your specific requirements, 
+such as handling different HTTP methods, headers, and parsing response data in different formats.
