@@ -1,0 +1,26 @@
+@code {
+    private string name;
+    private string email;
+    private List<DataEntry> dataEntries = new List<DataEntry>();
+
+    private void AddData()
+    {
+        var entry = new DataEntry
+        {
+            Name = name,
+            Email = email
+        };
+        dataEntries.Add(entry);
+
+        // Clear the input fields after adding data
+        name = string.Empty;
+        email = string.Empty;
+    }
+
+    public class DataEntry
+    {
+        public string Name { get; set; }
+        public string Email { get; set; }
+    }
+}
+
