@@ -1,0 +1,24 @@
+// DataCollection.razor
+@page "/datacollection"
+
+<h1>Data Collection Example</h1>
+
+<div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" id="name" class="form-control" @bind="name" />
+</div>
+
+<div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" class="form-control" @bind="email" />
+</div>
+
+<button class="btn btn-primary" @onclick="AddData">Add Data</button>
+
+<h2>Collected Data:</h2>
+<ul>
+    @foreach (var entry in dataEntries)
+    {
+        <li>@entry.Name - @entry.Email</li>
+    }
+</ul>
