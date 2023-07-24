@@ -1,0 +1,26 @@
+// MyComponent.razor
+@page "/mycomponent"
+
+<h1>Queue Example</h1>
+
+<button class="btn btn-primary" @onclick="EnqueueItem">Enqueue Item</button>
+<button class="btn btn-danger" @onclick="DequeueItem">Dequeue Item</button>
+
+<p>Current Queue Size: @myQueue.Count</p>
+
+@code {
+    private Queue<string> myQueue = new Queue<string>();
+
+    private void EnqueueItem()
+    {
+        myQueue.Enqueue("New Item");
+    }
+
+    private void DequeueItem()
+    {
+        if (myQueue.Count > 0)
+        {
+            myQueue.Dequeue();
+        }
+    }
+}
