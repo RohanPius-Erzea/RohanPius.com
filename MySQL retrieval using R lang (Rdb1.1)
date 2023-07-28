@@ -1,0 +1,29 @@
+install.packages("RMySQL")
+
+# Load the required library
+library(RMySQL)
+
+# Replace the following parameters with your database details
+db_host <- "your_database_host"
+db_user <- "your_username"
+db_password <- "your_password"
+db_name <- "my_database"
+
+# Establish a connection to the database
+con <- dbConnect(MySQL(), 
+                 host = db_host, 
+                 user = db_user, 
+                 password = db_password, 
+                 dbname = db_name)
+
+# Query to retrieve data from the table
+query <- "SELECT * FROM my_table"
+
+# Execute the query and store the results in a data frame
+result <- dbGetQuery(con, query)
+
+# Close the database connection
+dbDisconnect(con)
+
+# Print the retrieved data
+print(result)
